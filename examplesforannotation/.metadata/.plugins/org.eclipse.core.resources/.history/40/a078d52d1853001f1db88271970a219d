@@ -1,0 +1,18 @@
+package com.example.test.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.test.Dto.AnimalDog;
+
+@Component
+public class AnimalService {
+
+	private final AnimalDog animalDog;
+	@Autowired
+	public AnimalService(AnimalDog animalDog) {
+		this.animalDog=animalDog;
+			}
+
+
+}

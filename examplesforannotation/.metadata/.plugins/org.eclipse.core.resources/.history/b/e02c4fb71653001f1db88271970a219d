@@ -1,0 +1,35 @@
+package com.example.test.Dto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Animal {
+
+	private long id;
+	private String animalName;
+	private String animalNative;
+
+	
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getAnimalName() {
+		return animalName;
+	}
+	public void setAnimalName(String animalName) {
+		this.animalName = animalName;
+	}
+	public String getAnimalNative() {
+		return animalNative;
+	}
+	public void setAnimalNative(String animalNative) {
+		this.animalNative = animalNative;
+	}
+	
+}

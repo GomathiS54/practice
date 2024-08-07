@@ -1,0 +1,33 @@
+package com.example.test.Dto;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class AnimalDog {
+
+	
+	private long id;
+	private String dogName;
+	private int DogPrice;
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getDogName() {
+		return dogName;
+	}
+	public void setDogName(String dogName) {
+		this.dogName = dogName;
+	}
+	public int getDogPrice() {
+		return DogPrice;
+	}
+	public void setDogPrice(int dogPrice) {
+		DogPrice = dogPrice;
+	}
+	
+	
+}

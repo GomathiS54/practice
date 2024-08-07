@@ -1,0 +1,8 @@
+package com.example.test.Dto;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class AnimalDog {
+
+}

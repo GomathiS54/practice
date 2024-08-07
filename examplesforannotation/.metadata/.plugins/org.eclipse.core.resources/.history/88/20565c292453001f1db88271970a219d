@@ -1,0 +1,16 @@
+package com.example.test.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.test.Repo.Animal;
+
+@Service
+public class AnimalCat implements Animal{
+
+	@Override
+	public String Characteristics() {
+		return "Cat sound is Meow";
+	}
+	
+	
+}

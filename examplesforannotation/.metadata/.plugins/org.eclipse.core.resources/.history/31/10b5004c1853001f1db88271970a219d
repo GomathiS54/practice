@@ -1,0 +1,31 @@
+//package com.example.test.Controller;
+//
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.ResponseEntity;
+//
+//import org.springframework.web.bind.annotation.GetMapping;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RestController;
+//
+//import com.example.test.Service.AnimalService;
+//
+//
+//
+//@RestController
+//@RequestMapping("/animal")
+//public class AnimalCon {
+//     
+//	    public AnimalService animalService;
+//	    
+//	    @Autowired
+//	    public AnimalCon(AnimalService animalService) {
+//	    	this.animalService=animalService;
+//	    }
+//	
+//	    
+//	    @GetMapping("/get")
+//	    public ResponseEntity<String> greet() {
+//	        return ResponseEntity.ok("Welcom to Zooo!");
+//	    }
+//	}

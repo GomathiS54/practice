@@ -1,0 +1,22 @@
+package com.example.test;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
+
+@Configuration
+public class AppConfig {
+
+	
+	@Bean
+	@Order(value = 2)
+	public String AnimalDog() {
+		return "Bean Two";
+		}
+	
+	@Bean
+	@Order(value = 1)
+	public String AnimalCat() {
+		return "Bean One";
+	}
+}
