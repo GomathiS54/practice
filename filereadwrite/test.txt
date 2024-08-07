@@ -1,0 +1,1 @@
+<ArrayList><item><empId>1</empId><empName>Gomathi</empName><empSal>15000</empSal><empDept>Developer</empDept></item><item><empId>2</empId><empName>Vikram</empName><empSal>35000</empSal><empDept>Designer</empDept></item></ArrayList>
