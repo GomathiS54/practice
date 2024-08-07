@@ -1,0 +1,50 @@
+package com.example.files.Service;
+
+import com.example.files.Dto.EmployeeDto;
+import com.example.files.Dto.EmployeeList;
+import com.example.files.Repo.EmployeeRepo;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
+import jakarta.xml.bind.Unmarshaller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+@Service
+public class EmployeeService {
+
+    private final EmployeeRepo employeeRepo;
+
+    @Autowired
+    public EmployeeService(EmployeeRepo employeeRepo) {
+        this.employeeRepo = employeeRepo;
+    }
+
+    public EmployeeList findAll() {
+        List<EmployeeDto> employeeDtos = employeeRepo.findAll();
+        EmployeeList employeeList = new EmployeeList();
+        employeeList.setEmployees(employeeDtos);
+        return employeeList;
+    }
+
+    public EmployeeDto findById(Long id) {
+        return employeeRepo.findById(id).orElse(null);
+    }
+
+    public void saveToFile(EmployeeList employeeList, String filePath) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(EmployeeList.class);
+        Marshaller marshaller = context.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+        marshaller.marshal(employeeList, new File(filePath));
+    }
+
+    public EmployeeList readFromFile(String filePath) throws JAXBException {
+        JAXBContext context = JAXBContext.newInstance(EmployeeList.class);
+        Unmarshaller unmarshaller = context.createUnmarshaller();
+        return (EmployeeList) unmarshaller.unmarshal(new File(filePath));
+    }
+}

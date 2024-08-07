@@ -1,0 +1,42 @@
+package com.example.files.Service;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
+import com.example.files.Dto.EmployeeDto;
+import com.example.files.Dto.EmployeeList;
+import com.example.files.Repo.EmployeeRepo;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
+public class EmployeeService {
+	
+	
+	private final EmployeeRepo employeeRepo;
+	
+	@Autowired
+	public EmployeeService(EmployeeRepo employeeRepo) {
+		this.employeeRepo=employeeRepo;
+	}
+	
+	@Override
+	public EmployeeDto findAll() {
+		List<EmployeeDto> employeeDtos=employeeRepo.findAll();
+	    EmployeeDto myEmployeeDto=new EmployeeDto();
+	    myEmployeeDto.setEmpId(empId);
+	    myEmployeeDto.setEmpName(empName);
+	    myEmployeeDto.setEmpSal(empSal);
+	    myEmployeeDto.setEmpDept(empDept);
+	    return myEmployeeDto;
+	    
+	}
+	
+	@Override
+	public EmployeeDto findById(Long id) {
+		return employeeRepo.findById(id).orElse(null);
+	}
+	
+}
