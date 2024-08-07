@@ -1,0 +1,19 @@
+meta {
+  name: posttoget
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8080/api/book/get
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "bookid":3,
+    "bookName":"CA Course",
+    "bookAuthor":"Priya"
+  }
+}

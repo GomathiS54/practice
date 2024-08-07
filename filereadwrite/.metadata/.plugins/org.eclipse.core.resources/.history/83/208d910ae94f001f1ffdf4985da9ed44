@@ -1,5 +1,0 @@
-package com.example.files.Repo;
-
-public interface EmployeeRepo {
-
-}
