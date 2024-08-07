@@ -1,0 +1,28 @@
+meta {
+  name: jiraallissues
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://archimedis-team-ms94t67m.atlassian.net/rest/api/2/search?jql=project=SCRUM
+  body: json
+  auth: basic
+}
+
+params:query {
+  jql: project
+}
+
+auth:basic {
+  username: gomathi@archimedis.io
+  password: ATATT3xFfGF0lxEa97stqULzRGKeSXGxmc10JSLhIwkf9UimtaK9O0lLMTKaIZ94KrPp2379NFYKkYncvT_X4ZcIyvcNdxBThAcdEfMEeVsuKHtzX6IupTR2NwGUmDoxa0K6OP3SuoasQzQr2ZQn4YI8lqEDSU_EZtnOFIDBwMQeSaiRtE9UAEA=5BA80FDA
+}
+
+body:json {
+  
+                      
+    
+    
+  
+}

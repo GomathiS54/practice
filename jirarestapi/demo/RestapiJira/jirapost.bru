@@ -1,0 +1,39 @@
+meta {
+  name: jirapost
+  type: http
+  seq: 3
+}
+
+get {
+  url: https://archimedis-team-ms94t67m.atlassian.net/rest/api/2/issue/SCRUM-11
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: gomathi@archimedis.io
+  password: ATATT3xFfGF0lxEa97stqULzRGKeSXGxmc10JSLhIwkf9UimtaK9O0lLMTKaIZ94KrPp2379NFYKkYncvT_X4ZcIyvcNdxBThAcdEfMEeVsuKHtzX6IupTR2NwGUmDoxa0K6OP3SuoasQzQr2ZQn4YI8lqEDSU_EZtnOFIDBwMQeSaiRtE9UAEA=5BA80FDA
+}
+
+body:json {
+  { 
+    "fields": 
+   { 
+      "project": 
+     { 
+       "key": "SCRUM" 
+     }, 
+       
+     "summary": "new result Issue", 
+     "description": "Create to new result issue", 
+    "issuetype": 
+     { 
+     "name":"Bug"
+   }
+  }
+  }
+                      
+    
+    
+  
+}
